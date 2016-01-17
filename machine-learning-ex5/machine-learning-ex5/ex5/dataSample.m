@@ -1,0 +1,18 @@
+function [sampledDataX,sampledDataY] = dataSample(dataX,dataY,numSamples)
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+
+if size(dataX,1) == 1
+   data = data'; 
+end
+
+
+rVec = randperm(size(dataX,1)); % @param data should be a vector
+
+sampledDataX = dataX(rVec(1:numSamples),:); % Random Sample on X
+sampledDataY = dataY(rVec(1:numSamples),:); % Random Sample on Y
+
+
+
+end
+
